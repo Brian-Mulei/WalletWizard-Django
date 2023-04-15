@@ -25,7 +25,7 @@ SECRET_KEY = '=r@%7$l^j1mhi8os+4%d3gj0^psgt7tq&+%mr9g#eqcx$a=cb-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 #DEBUG=False
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','0.0.0.0']
 
 
 # Application definition
@@ -82,13 +82,13 @@ DATABASES = {
         
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
-        'NAME': 'WalletWizardDB',
+        'NAME': os.environ.get('POSTGRES_NAME'),
+        
+        'USER': os.environ.get('POSTGRES_USER'),
+        
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
 
-        'USER': 'brianmulei',
-
-        'PASSWORD': '1234',
-
-        'HOST': 'localhost',
+        'HOST': 'db',
 
         'PORT': '5432',
     }
