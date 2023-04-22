@@ -25,7 +25,7 @@ SECRET_KEY = '=r@%7$l^j1mhi8os+4%d3gj0^psgt7tq&+%mr9g#eqcx$a=cb-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 #DEBUG=False
-ALLOWED_HOSTS = ['127.0.0.1','0.0.0.0']
+ALLOWED_HOSTS = ['127.0.0.1','0.0.0.0','localhost']
 
 
 # Application definition
@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'drf_yasg',
-    'users'
+    'users',
+    'accounts'
 ]
 
 MIDDLEWARE = [
