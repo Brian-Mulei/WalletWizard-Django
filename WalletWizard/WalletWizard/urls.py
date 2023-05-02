@@ -40,7 +40,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("users/", include('users.urls')),
     path("accounts/", include('accounts.urls')),
+    path("categories/", include('categories.urls')),
 
+    path("transactions/", include('transaction.urls')),
     path('api-token-auth', views.obtain_auth_token),
 
     
